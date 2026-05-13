@@ -1,36 +1,47 @@
-/* Reset básico para evitar margens indesejadas */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-/* Cabeçalho e Navegação */
-header {
-    background-color: #1e3a8a; /* Azul Escuro */
-    color: white;
-    padding: 1rem 5%;
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
 }
 
-nav {
+.flex {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+header {
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .interface {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo {
+.logo h1 {
+    color: #1a237e;
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
-.logo span {
-    color: #3b82f6; /* Azul claro */
+.logo h1 span {
+    color: #ffd700;
 }
 
 nav ul {
@@ -39,73 +50,84 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #555;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #3b82f6;
+    color: #1a237e;
 }
 
-/* Seção Principal (Hero) */
+.btn-contato button {
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Hero Section (Banner) */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1523050335392-9ae574d7993a?auto=format&fit=crop&w=1350&q=80');
+    height: 60vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050335392-9ae574d7993a?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.btn-principal {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #3b82f6;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-/* Cards de Cursos */
-.cards-container {
     display: flex;
-    justify-content: space-around;
-    padding: 50px 5%;
-    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+}
+
+.txt-hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.txt-hero p {
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.txt-hero button {
+    padding: 15px 40px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Cards de Destaque */
+.destaques {
+    padding: 60px 0;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    flex: 1;
 }
 
 .card h3 {
-    color: #1e3a8a;
-    margin-bottom: 10px;
+    color: #1a237e;
+    margin-bottom: 15px;
 }
 
 /* Rodapé */
 footer {
+    padding: 40px 0;
+    background-color: #1a237e;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background-color: #1e293b;
-    color: white;
-    margin-top: 50px;
 }
